@@ -18,8 +18,16 @@ const createMemeService = async (
   try {
     const connection = getConnection().getRepository(Meme);
     const meme = connection.create(data);
-    const existingMeme = await connection.findOne({ url: meme.url });
-    if (existingMeme) return { ...existingMeme, created: false };
+    const existingMeme = await connection.findOne({
+      url: data.url,
+    });
+
+    if (
+      existingMeme &&
+      existingMeme.name === meme.name &&
+      existingMeme.caption === meme.caption
+    )
+      return { ...existingMeme, created: false };
     const savedMeme = await connection.save(meme);
     return { ...savedMeme, created: true };
   } catch (err) {
