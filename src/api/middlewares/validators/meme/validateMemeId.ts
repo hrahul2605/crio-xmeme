@@ -5,7 +5,7 @@ const schema = Joi.object({
   id: Joi.number().required(),
 });
 
-const getMemeValidate: RequestHandler = async (
+const validateMemeId: RequestHandler = async (
   req: Request,
   res: Response,
   next: NextFunction
@@ -19,4 +19,4 @@ const getMemeValidate: RequestHandler = async (
   }
 };
 
-export default getMemeValidate;
+export default validateMemeId;

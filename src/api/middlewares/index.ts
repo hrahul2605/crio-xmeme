@@ -1,9 +1,9 @@
 import postMemeValidate from "./validators/meme/postMemeValidate";
-import getMemeValidate from "./validators/meme/getMemeValidate";
+import validateMemeId from "./validators/meme/validateMemeId";
 
 const validators = {
   postMemeValidate,
-  getMemeValidate,
+  validateMemeId,
 };
 
 export { validators };
