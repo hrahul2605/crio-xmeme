@@ -13,7 +13,7 @@ const postMemeValidate: RequestHandler = async (
   next: NextFunction
 ) => {
   try {
-    const { name, url, caption } = req.query;
+    const { name, url, caption } = req.body;
     await schema.validateAsync({ name, url, caption });
     next();
   } catch (err) {
