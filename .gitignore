@@ -3,4 +3,6 @@ dist
 
 .env
 
+
+yarn-error.log
 scripts.js
