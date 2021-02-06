@@ -13,10 +13,10 @@ export class Meme {
   @Column({ type: "text", nullable: false })
   name: string;
 
-  @Column({ type: "text", nullable: false })
+  @Column({ type: "text", nullable: false, unique: true })
   url: string;
 
-  @Column({ type: "text", nullable: false })
+  @Column({ type: "text", nullable: false, unique: true })
   caption: string;
 
   @CreateDateColumn()
