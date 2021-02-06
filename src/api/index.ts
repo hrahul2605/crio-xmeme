@@ -9,4 +9,14 @@ export default (app: Application) => {
   app.get("/", (_, res: Response) => {
     res.send("Server Running");
   });
+
+  // Error Handler
+  app.use((err, _, res, _next) => {
+    res.status(500).send({ message: err });
+  });
+
+  // Invalid Route Handler
+  app.use((_, res) => {
+    res.status(400).send({ message: "Invalid Route" });
+  });
 };
