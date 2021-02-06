@@ -16,7 +16,7 @@ const postMemeController: RequestHandler = async (
     if (created) res.status(201).send(result);
     else res.status(409).send({ message: "Meme already Exits" });
   } catch (err) {
-    next("Did my code break? Or is it thy server? maybe DB?? AHHHHHH!!!!");
+    next("internal");
   }
 };
 

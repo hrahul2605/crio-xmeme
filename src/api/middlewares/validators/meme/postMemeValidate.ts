@@ -17,8 +17,7 @@ const postMemeValidate: RequestHandler = async (
     await schema.validateAsync({ name, url, caption });
     next();
   } catch (err) {
-    res.status(400);
-    res.json({ message: "Request Validation Failed" });
+    next("validation");
   }
 };
 

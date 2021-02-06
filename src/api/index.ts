@@ -12,7 +12,16 @@ export default (app: Application) => {
 
   // Error Handler
   app.use((err, _, res, _next) => {
-    res.status(500).send({ message: err });
+    if (err === "validation") {
+      res.status(400);
+      res.json({ message: "Request Validation Failed" });
+    } else if (err === "internal") {
+      res.status(500);
+      res.send({
+        message:
+          "Did my code break? Or is it thy server? maybe DB?? AHHHHHH!!!!",
+      });
+    }
   });
 
   // Invalid Route Handler
