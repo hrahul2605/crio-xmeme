@@ -27,9 +27,6 @@ const createMemeService = async (
       caption: data.caption,
     });
 
-    console.log(data);
-    console.log(existingMeme);
-
     if (existingMeme) return { ...existingMeme, created: false };
     const savedMeme = await connection.save(meme);
     return { ...savedMeme, created: true };
