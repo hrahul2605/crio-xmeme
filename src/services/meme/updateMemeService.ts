@@ -1,5 +1,6 @@
-import { getRepository } from "typeorm";
+import { getConnection } from "typeorm";
 import { Meme } from "../../entity/Meme";
+import config from "../../config";
 
 interface serviceParams {
   id: string;
@@ -10,18 +11,28 @@ interface serviceParams {
 const updateMemeService = async (data: serviceParams) => {
   try {
     const id = parseInt(data.id, 10);
-    const repo = getRepository(Meme);
+    const repo = getConnection(config.DB_CONNECTION_NAME).getRepository(Meme);
 
-    const duplicate = await repo.findOne({ url: data.url });
+    // Existing meme based on ID
     const existing = await repo.findOne(id);
 
+    // Final Meme after update
+    const finalMeme = {
+      url: data.url || existing.url,
+      caption: data.caption || existing.caption,
+      name: existing.name,
+    };
+
+    // Duplicate meme based on Final Meme
+    const duplicate = await repo.findOne(finalMeme);
+
     // Checks if updated value becomes duplicate
-    if (duplicate && existing) {
-      if (
-        duplicate.name === existing.name &&
-        duplicate.caption === data.caption
-      )
-        return { duplicate: true, updated: false };
+    if (duplicate) {
+      // Check if found duplicate is same as existing meme i.e. nothing is changed
+      if (duplicate.id === existing.id)
+        return { duplicate: true, same: true, updated: false };
+
+      return { duplicate: true, updated: false };
     }
 
     // Handles update

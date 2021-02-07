@@ -1,9 +1,10 @@
-import { getRepository } from "typeorm";
+import { getConnection } from "typeorm";
 import { Meme } from "../../entity/Meme";
+import config from '../../config';
 
 const getMemesService = async () => {
   try {
-    const result = await getRepository(Meme)
+    const result = await getConnection(config.DB_CONNECTION_NAME).getRepository(Meme)
       .createQueryBuilder("meme")
       .limit(100)
       .addOrderBy("meme.updatedAt", "DESC")

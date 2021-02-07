@@ -11,7 +11,10 @@ const updateMemeController: RequestHandler = async (
     const { url, caption } = req.body;
     const result = await meme.updateMemeService({ id, url, caption });
 
-    if (result.duplicate) res.status(409).json({ message: "Duplicate Meme exist." });
+    if (result.duplicate && result.same)
+      res.status(409).json({ message: "Values for meme did not change." });
+    else if (result.duplicate)
+      res.status(409).json({ message: "Duplicate Meme exist." });
     else if (result.updated)
       res.json({ message: "Meme Updated Successfully." });
     else res.status(404).json({ message: `Meme ID: ${id} doesnt exist.` });

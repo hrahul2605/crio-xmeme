@@ -1,11 +1,28 @@
-{
-  "type": "postgres",
-  "host": "localhost",
-  "port": 5432,
-  "username": "crio-hrahul2605",
-  "password": "",
-  "database": "XMeme",
-  "entities": ["src/entity/*.ts"],
-  "logging": true,
-  "synchronize": true
-}
+[
+  {
+    "environment": "dev",
+    "name": "default",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "dev",
+    "password": "",
+    "database": "XMeme-Dev",
+    "entities": ["src/entity/*.ts"],
+    "logging": true,
+    "synchronize": true
+  },
+  {
+    "environment": "production",
+    "name": "production",
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5432,
+    "username": "crio-hrahul2605",
+    "password": "",
+    "database": "XMeme",
+    "entities": ["dist/entity/*.js"],
+    "logging": false,
+    "synchronize": true
+  }
+]
