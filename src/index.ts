@@ -5,12 +5,18 @@ import config from "./config";
 import loaders from "./loaders";
 import initRoutes from "./api";
 
-const server = async () => {
-  const app = express();
-  app.use(morgan("dev"));
+import path from "path";
 
-  await loaders(app);
-  initRoutes(app);
+const server = async () => {
+  const app = express();      // Express app initialisation
+
+  app.use(morgan("dev"));     // Logs 
+  app.use("/", express.static(path.join(__dirname, "../client")));  // Static Frontend served
+  
+  await loaders(app);         // Loading necessary dependancies
+  initRoutes(app);            // Initialising routes
+
+  // Server starting
   app.listen(config.PORT, () => {
     console.log(`Server started at http://localhost:${config.PORT}`);
   });

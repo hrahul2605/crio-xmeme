@@ -12,5 +12,5 @@
     "types": ["node"],
     "typeRoots": ["src/api/@types", "node_modules/@types"],
   },
-  "include": ["src/**/*"]
+  "include": ["src/**/*", "client"]
 }
