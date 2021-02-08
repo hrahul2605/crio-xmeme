@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <title>XMeme</title>
+  </head>
+  <body
+    class="d-flex flex-shrink-0 flex-column"
+    style="padding-top: 82px; height: 100vh"
+  >
+    <!-- Nav Bar -->
+    <nav
+      class="navbar fixed-top navbar-light shadow-sm"
+      style="background-color: #ced4da; padding: 12px 24px"
+    >
+      <div class="container-fluid">
+        <span class="navbar-brand mb-0 fs-2 fw-bold" style="color: #6c757d"
+          >XMeme</span
+        >
+        <div class="d-flex flex align-items-center justify-content-center">
+          <p class="my-0" style="margin-right: 12px">
+            Made with
+            <img
+              src="https://github.githubassets.com/images/icons/emoji/unicode/2764.png"
+              alt="heart"
+              height="20"
+              width="20"
+            />
+          </p>
+          <a
+            class="btn btn-outline-secondary"
+            style="margin-right: 12px"
+            href="mailto:hrahul2605@gmail.com"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-envelope-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn btn-outline-secondary"
+            style="margin-right: 12px"
+            href="https://linkedin.com/in/hrahul2605/"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-linkedin"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"
+              />
+            </svg>
+          </a>
+          <a
+            class="btn btn-outline-secondary"
+            style="margin-right: 12px"
+            href="https://github.com/hrahul2605"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-github"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+              />
+            </svg>
+          </a>
+          <button
+            class="btn btn-success"
+            style="margin-left: 36px"
+            data-bs-toggle="modal"
+            data-bs-target="#createMemeModal"
+            type="button"
+          >
+            Show Meme Skilzz
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Success alert while creating memes. -->
+    <div class="p-4">
+      <div
+        class="alert alert-success"
+        style="display: none; max-width: 1000px"
+        id="success-alert"
+        role="alert"
+      ></div>
+
+      <!-- Error alert while creating/updating memes. -->
+      <div
+        class="alert alert-danger"
+        style="display: none; max-width: 1000px"
+        id="error-alert"
+        role="alert"
+      ></div>
+
+      <!-- Modal to create meme -->
+      <div class="modal fade" id="createMemeModal" tabindex="-1">
+        <div class="modal-dialog">
+          <form id="form" class="col needs-validation" novalidate>
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Spam your Meme</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="col-12 mt-2">
+                  <label for="author" class="form-label">Author</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="author"
+                    id="author"
+                    required
+                  />
+                  <div class="invalid-feedback">Required Field.</div>
+                  <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="col-12 mt-2">
+                  <label for="url" class="form-label">URL</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="url"
+                    id="url"
+                    required
+                  />
+                  <div class="invalid-feedback">Required Field.</div>
+                  <div class="valid-feedback">Aigh't mate!</div>
+                </div>
+                <div class="col-12 my-2">
+                  <label for="caption" class="form-label">Caption</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="caption"
+                    id="caption"
+                    required
+                  />
+                  <div class="invalid-feedback">Required Field.</div>
+                  <div class="valid-feedback">Noice!</div>
+                </div>
+                <span class="mt-2">
+                  Don't waste this amazing oppurtuanity to show your skilzz!!
+                </span>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="submit" class="btn btn-primary">Meme it!!</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Modal to update meme -->
+      <div class="modal fade" id="updateMemeModal" tabindex="-1">
+        <div class="modal-dialog">
+          <form id="update-form" class="col needs-validation" novalidate>
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title">Update this?</h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                <div class="col-12 mt-2">
+                  <label class="form-label">Author</label>
+                  <p id="update-modal-name"></p>
+                </div>
+                <div class="col-12 mt-2">
+                  <label for="update-url" class="form-label">URL</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="update-url"
+                    id="update-url"
+                  />
+                  <div class="valid-feedback">Cool</div>
+                </div>
+                <div class="col-12 my-2">
+                  <label for="update-caption" class="form-label">Caption</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    name="update-caption"
+                    id="update-caption"
+                  />
+                  <div class="valid-feedback">Cool</div>
+                </div>
+                <span class="mt-2" />
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button
+                  id="updateModalButton"
+                  type="button"
+                  class="btn btn-primary"
+                >
+                  Yo its old, update it!!
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- ROOT element containing all the meme cards -->
+      <div id="root" class="row flex-wrap justify-flex-start mx-auto"></div>
+    </div>
+    <footer class="footer mt-auto py-3 bg-light text-center">
+      <span>All Rights Reserved. All Wrongs Reversed.</span>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
