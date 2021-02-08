@@ -7,9 +7,6 @@ sudo apt-get -y update
 
 sudo apt-get install -y wget ca-certificates build-essential apt-transport-https curl gnupg-agent software-properties-common
 
-# curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
-# sudo apt-get install -y nodejs
-
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 sudo apt-key fingerprint 0EBFCD88
 
@@ -19,7 +16,7 @@ sudo add-apt-repository \
    stable"
 
 sudo apt-get -y update
-sudo apt-get install docker-ce docker-ce-cli containerd.io
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
