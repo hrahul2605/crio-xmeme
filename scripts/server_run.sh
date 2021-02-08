@@ -1,5 +1,5 @@
 #!/bin/bash
 
-yarn install
+docker build -t xmeme_app .
 
-yarn start
+docker run -d --net="host" xmeme_app
