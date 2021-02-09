@@ -1,3 +1,23 @@
+/**
+ * @swagger
+ * components:
+ *    schemas:
+ *      Meme:
+ *        properties:
+ *          id:
+ *            type: number
+ *          url:
+ *            type: string
+ *          caption:
+ *            type: string
+ *          name:
+ *            type: string
+ *          createdAt:
+ *            type: string
+ *          updatedAt:
+ *            type: string
+ */
+
 import {
   Entity,
   Column,
