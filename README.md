@@ -1,6 +1,6 @@
 # XMeme
 
-*This mini-project is completed under **Crio** in **Stage 2 Phase-B***
+*This mini-project is completed under **Crio Winter of Doing** in **Stage 2 Phase-B***
 
 ## Description
 
@@ -17,6 +17,7 @@ A web application to handle creating or updating Memes.
 ## Deployment
 
 -> Currently this project is deployed at `https://xmeme-hrahul2605.ldbd.me`  
+-> Docs of the same at `https://xmeme-hrahul2605.ldbd.me/swagger-ui`  
 -> Configured with Nginx & Certbot for HTTPS certificates.   
 
 ## Scripts
@@ -46,7 +47,7 @@ A web application to handle creating or updating Memes.
 * Running `server_run.sh` builds the docker image for the application & runs it in a container.
 
     `http://localhost:8081` serves the web application.  
-    `http://localhost:8080` serves the API documentation for the same.
+    `http://localhost:8080/swagger-ui` serves the API documentation for the same.
 
 ## Development
 
