@@ -22,6 +22,9 @@ const swaggerConfig = {
       {
         url: "http://localhost:8081",
       },
+      {
+        url: "https://xmeme-hrahul2605.ldbd.me"
+      }
     ],
   },
   apis: ["src/api/routes/*.{ts,js}", "src/entity/*.{ts,js}"],
