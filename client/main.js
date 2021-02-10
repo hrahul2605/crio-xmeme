@@ -84,7 +84,8 @@ async function handleSubmit(e, form) {
   } catch (err) {
     console.log(err);
   }
-
+  createForm.reset();
+  createForm.classList.remove('was-validated');
   return false;
 }
 
@@ -187,6 +188,8 @@ async function handleUpdateSubmit(data) {
       Alert(false, result.message);
       getMemes();
     }
+    updateForm.reset();
+    updateForm.classList.remove('was-validated');
   } catch (err) {
     console.log(err);
   }
