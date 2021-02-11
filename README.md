@@ -28,7 +28,7 @@ A web application to handle creating or updating Memes.
     -> Installs the necessary dependancies. 
 
     server_run.sh
-    -> Building & running the docker image. 
+    -> Building & running the server. 
         Server runs at port 8081.
         Server API Documentation (Swagger) run at port 8080
 
@@ -42,9 +42,8 @@ A web application to handle creating or updating Memes.
 ## To Get Started
 
 * You can run `install.sh` if you dont have the dependancies for this project.  
-    *Keeping in mind the script doesnot install nodejs.*
 
-* Running `server_run.sh` builds the docker image for the application & runs it in a container.
+* Running `server_run.sh` builds the server files & runs it.
 
     [http://localhost:8081](http://localhost:8081) serves the web application.  
     [http://localhost:8080/swagger-ui](http://localhost:8080/swagger-ui) serves the API documentation for the same.
