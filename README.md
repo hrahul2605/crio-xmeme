@@ -14,12 +14,6 @@ A web application to handle creating or updating Memes.
 -> Postgresql (Typeorm) for database.  
 -> Dockerised web application.
 
-## Deployment
-
--> Currently this project is deployed at [https://xmeme-hrahul2605.ldbd.me](https://xmeme-hrahul2605.ldbd.me)    
--> Docs of the same at [https://xmeme-hrahul2605.ldbd.me/swagger-ui](https://xmeme-hrahul2605.ldbd.me/swagger-ui)    
--> Configured with Nginx & Certbot for HTTPS certificates.   
-
 ## Scripts
 
 *Configured mainly for Ubuntu.*
